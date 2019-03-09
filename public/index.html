@@ -9,11 +9,141 @@
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
 
     <title>Express + Netlify Functions</title>
+    
+        <meta name="google-site-verification" content="*******" />
+    <meta charset="utf-8">
+    <title>byte</title>
+    <meta name="description" content="a new looping video app by the creator of vine">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="byte" />
+    <meta property="og:description" content="a new looping video app by the creator of vine" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="******" />
+    <meta property="og:image" content="https://byte.co/public/images/logo.png" />
+
+    <link href="//fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://byte.co/public/css/normalize.css">
+    <link rel="stylesheet" href="https://byte.co/public/css/skeleton.css">
+
+    <link rel="icon" href="/public/images/favicon.ico">
+
+    <style>
+        * {
+            overflow-x: hidden;
+        }
+
+        #video-background {
+            /*  making the video fullscreen  */
+            position: fixed;
+            right: 0; 
+            bottom: 0;
+            min-width: 100%; 
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            /* opacity: 0.1; */
+            background: #2717C1;
+        }
+
+        body {
+            background: #2717C1;
+            color: #fff;
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-weight: 400;
+            font-size: 1.75em;
+        }
+
+        a {
+            text-decoration: none;
+            color: #26daff;
+        }
+
+        a:hover {
+            color: #26daff;
+            border-bottom: 1px solid #2EBEA9;
+        }
+
+        input {
+            color: #000
+        }
+
+        input[type="submit"] {
+            text-transform: none;
+            letter-spacing: normal;
+            font-size: 0.75em;
+            position: relative;
+            top: -1px;
+            overflow: hidden;
+        }
+
+        #logo {
+            position: relative;
+            height: 400px;
+            left: -60px;
+        }
+
+        input[type="submit"].button-primary {
+            background: #26daff;
+        }
+    </style>    
   </head>
   <body>
+    
+    <video id="video-background" muted playsinline autoplay loop>
+        <!-- <source src="https://player.vimeo.com/external/299697731.m3u8?s=d658707cc79e330b653fd63b0d705a07ce4c296e" type="video/mp4"> -->
+        <source src="https://player.vimeo.com/external/299697731.sd.mp4?s=07b24d11c20faa76e764e2de50848894bfa64409&profile_id=165"
+            type="video/mp4">
+    </video>
+
+    <div class="container">
+        <div class="row" style="margin-top: 15%">
+            <div class="six columns">
+                <object id="logo" type="image/svg+xml" data="/public/images/logo.svg"></object>
+                <p>a new looping video app by the creator of vine</p>
+            </div>
+        </div>
+        <div class="row">
+            
+            <div class="six columns" style="margin-top: 20px">
+                <form action="https://byte.us11.list-manage.com/subscribe/post?u=7d5a147a16453f8bd059a7141&amp;id=12fae3c757"
+                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+                    target="_blank" novalidate>
+                    <label for="emailAddress">sign up for updates</label>
+                    <input type="email" style="width: 250px" name="EMAIL" id="mce-EMAIL" placeholder="your@email.com">
+                    <input class="button-primary" id="mc-embedded-subscribe" type="submit" value="sign up">
+                </form>
+            </div>
+            
+        </div>
+        <div class="row" style="margin-top: 50px; margin-bottom: 50px">
+            <div class="two columns">
+                <a href="https://twitter.com/byte_app">twitter</a><br>
+                <a href="https://instagram.com/byte_app">instagram</a>
+            </div>
+            <div class="two columns">
+                <a href="https://www.youtube.com/channel/UCoXXd4zlEZKQRNCDx1lJXGQ">youtube</a><br>
+                <a href="https://community.v2.co">forums</a>
+            </div>
+            <div class="two columns">
+                <a href="https://goo.gl/forms/iPYmRaMfvKAj6XWs2">creators</a> ❤️
+            </div>
+        </div>
+    </div>
+    <script>
+        if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+            document.getElementById('video-background').setAttribute('src',
+                'https://player.vimeo.com/external/299697731.m3u8?s=d658707cc79e330b653fd63b0d705a07ce4c296e');
+            document.getElementById('video-background').load();
+            document.getElementById('video-background').play();
+        }
+    </script>
+<!--     
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
-    <div id="root"></div>
+    <div id="root"></div> -->
+
   </body>
 </html>
